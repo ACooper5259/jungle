@@ -5,11 +5,11 @@
   </header>
 
 <% if cart.count == 0 %>
-    <div id="empty_cart">
+    <div class="alert alert-warning">
       <h2>
-        Your cart is empty at the moment. 
+        Your cart is empty at the moment. Head back to the home page to add items.
       </h2>
-  <button><%= link_to 'Home', :root %> </button>
+  <button type="button" class="btn btn-secondary btn-lg btn-block"><%= link_to 'Home', :root %> </button>
   </div>
 
 <% else %>
