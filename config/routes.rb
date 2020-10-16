@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :categories, only: [:show]
   resources :about, only: [:index]
   resource :users, only: [:new, :create]
+
   
 
   resource :cart, only: [:show] do
@@ -21,6 +22,15 @@ Rails.application.routes.draw do
     resources :products, except: [:edit, :update, :show]
     resources :categories, only: [:index, :create, :new]
   end
+
+  # log in page with form:
+	get '/login'     => 'sessions#new'
+	
+	# create (post) action for when log in form is submitted:
+	post '/login'    => 'sessions#create'
+	
+	# delete action to log out:
+	delete '/logout' => 'sessions#destroy'  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
