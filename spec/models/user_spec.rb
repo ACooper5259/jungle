@@ -51,9 +51,9 @@ RSpec.describe User, type: :model do
   describe '.authenticate_with_credentials' do
 
     it 'authenticates a user even with extra blank spaces in the email address' do
-      @user1 = User.create(email: "test@test.com", first_name: "test_first", last_name: "test_last", password: "password", password_confirmation: "password")
+      @user1 = User.create!(email: "test@test.com", first_name: "test_first", last_name: "test_last", password: "password", password_confirmation: "password")
     
-      expect(@user1.authenticate_with_credentials("  test@test.com", "password")).not_to be_valid
+      expect(User.authenticate_with_credentials("  test@test.com" , "password" )).not_to be_nil
     end
     
     it 'a User registered an email with capital letters, a user with the same email but no caps is invalid' do
