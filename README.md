@@ -1,13 +1,18 @@
 # Jungle
 
 A mini e-commerce application built with Rails 4.2 for purposes of learning Rails by example.
+![new_home](https://user-images.githubusercontent.com/27575454/96772793-7f803f00-1398-11eb-8c50-347af665870c.png)
 
 The project was based on legacy code, and numerous new features were added:
  * Admin security: admin pages now protected with user name and password combination through http basic authentication.
  * A sold-out badge is displayed when product quantity reaches 0
+ ![Sold-Out](https://user-images.githubusercontent.com/27575454/96772853-94f56900-1398-11eb-815f-ae30e6ca1d86.png)
  * Sale feature: an admin sale page has been added. The current sale feature has also been added to the user interface.
+ ![Admin_sales](https://user-images.githubusercontent.com/27575454/96772735-6d060580-1398-11eb-8092-86b4a03f3d3b.png)
  * User authentication functionalities have been added, with registration and login pages. User passwords are not stored as plain text on the database and email addresses are checked for uniqueness at registration.
+ ![Sign-up](https://user-images.githubusercontent.com/27575454/96772946-b6565500-1398-11eb-851a-5e449bb0a953.png)
  * Order Details page has been overhauled displaying relevant information after order confirmation, including items ordered, final amount of the order and the email address used to place the order.
+ ![Order_confirmation](https://user-images.githubusercontent.com/27575454/96773336-3977ab00-1399-11eb-912c-f2002247d908.png)
  * Empty cart: if the cart is empty and a user clicks on the icon, a friendly message will direct them to add items before checking out, with a link back to the home page.
 
 
