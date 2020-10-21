@@ -1,6 +1,15 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 4.2 for purposes of learning Rails by example.
+
+The project was based on legacy code, and numerous new features were added:
+ * Admin security: admin pages now protected with user name and password combination through http basic authentication.
+ * A sold-out badge is displayed when product quantity reaches 0
+ * Sale feature: an admin sale page has been added. The current sale feature has also been added to the user interface.
+ * User authentication functionalities have been added, with registration and login pages. User passwords are not stored as plain text on the database and email addresses are checked for uniqueness at registration.
+ * Order Details page has been overhauled displaying relevant information after order confirmation, including items ordered, final amount of the order and the email address used to place the order.
+ * Empty cart: if the cart is empty and a user clicks on the icon, a friendly message will direct them to add items before checking out, with a link back to the home page.
+
 
 
 ## Setup
